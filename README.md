@@ -10,7 +10,7 @@ Config:
 
 *Example:*
 > link: "http://example.org/data.json"
-<br><br>
+\\
 
 - **data**
 > Provide the data to be used in the app by referencing the json key. Multiple values can be provided in a list but the first value is always the value being measured by the app. Other values can include stuff like units (kg, ppm).
@@ -18,4 +18,4 @@ Config:
 
 *Example:*
 >data: ["value","unit"]
-<br><br>
+\\
