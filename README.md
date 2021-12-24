@@ -6,4 +6,4 @@ Right now only a simply meter bar is used to display the data.
 Config:
 - **link**
 > Provide the link to use for data visualization.
-> Example: link: "http://example.org/data.json"
+> *Example: link: "http://example.org/data.json"*
