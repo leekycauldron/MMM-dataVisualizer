@@ -71,8 +71,14 @@ Module.register("MMM-dataVisualizer", {
 			})
 			
 			// Fill bar using thresholds.
-			c.rect(10+1,31,px,19);
-			c.fill();
+			if (this.numData <= this.max) {
+				c.rect(10+1,31,px,19);
+				c.fill();
+			} else {
+				c.rect(10+1,31,toDisplay.length*20-1,19);
+				c.fill();
+			}
+			
 			c.strokeStyle = 'white';
 			c.rect(10,30,toDisplay.length*20,20);
 			c.stroke();
