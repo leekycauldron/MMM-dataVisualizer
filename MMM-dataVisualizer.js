@@ -61,7 +61,7 @@ Module.register("MMM-dataVisualizer", {
 			let px =Math.round( pct * (toDisplay.length*20-1));
 			c.fillStyle = 'white';
 			c.font = '24px Sans-Serif';
-			c.fillText(this.config.title, (toDisplay.length*20)/4, 0);
+			c.fillText(this.config.title, (toDisplay.length*20)/4, 10);
 
 			this.config.thresholds.forEach(threshold => {
 				if (this.numData >= threshold[0] && this.numData <= threshold[1]) {
