@@ -5,7 +5,8 @@ Module.register("MMM-dataVisualizer", {
         link: "", // Link containing data.
         data: [], // data to get and display. first one must be a number so that it can be visualized. Multiple values can be used.
         thresholds: [], // Thresholds for color coding (INCLUSIVE). [min,max,color (rgb)] // This also creates the limits for the graph. If number surpasses thresholds., it will color code it as the color with the largest value.
-		refreshRate: 300000 
+		refreshRate: 300000,
+		title: "" 
 },
 
 
@@ -34,6 +35,8 @@ Module.register("MMM-dataVisualizer", {
     	var wrapper = document.createElement("div");
 		wrapper.id = "wrapper";
         
+		let title = document.createElement('h1');
+		title.innerHTML = this.config.title;
 
         fetch(this.config.link)
         .then(response => response.json())
@@ -42,7 +45,7 @@ Module.register("MMM-dataVisualizer", {
             let toDisplay = "";
         
             this.config.data.forEach(val => {
-                toDisplay += res[val];
+                toDisplay += res[val] + " ";
             });
 			
             this.numData = res[this.config.data[0]];
@@ -76,7 +79,7 @@ Module.register("MMM-dataVisualizer", {
 			c.font = '24px Sans-Serif';
 			c.fillText(toDisplay, (visualization.width/2)-(c.measureText(toDisplay).width/2), 60);
 
-			
+			wrapper.appendChild(title);
             wrapper.appendChild(visualization);
 		
 
