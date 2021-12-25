@@ -61,7 +61,7 @@ Module.register("MMM-dataVisualizer", {
 			let px =Math.round( pct * (toDisplay.length*20-1));
 			c.fillStyle = 'white';
 			c.font = '24px Sans-Serif';
-			c.fillText(this.config.title, (toDisplay.length*20)/4, 20);
+			c.fillText(this.config.title, (toDisplay.length*20)/4, 0);
 
 			this.config.thresholds.forEach(threshold => {
 				if (this.numData >= threshold[0] && this.numData <= threshold[1]) {
@@ -71,7 +71,7 @@ Module.register("MMM-dataVisualizer", {
 			})
 			
 			// Fill bar using thresholds.
-			c.rect(10+1,11,px,19);
+			c.rect(10+1,31,px,19);
 			c.fill();
 			c.strokeStyle = 'white';
 			c.rect(10,30,toDisplay.length*20,20);
