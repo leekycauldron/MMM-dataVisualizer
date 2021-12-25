@@ -77,7 +77,7 @@ Module.register("MMM-dataVisualizer", {
 
 			c.fillStyle = 'white';
 			c.font = '24px Sans-Serif';
-			c.fillText(toDisplay, (visualization.width/2)-(c.measureText(toDisplay).width/2), 60);
+			c.fillText(toDisplay, (toDisplay.length*20)/4, 60);
 
 			wrapper.appendChild(title);
             wrapper.appendChild(visualization);
