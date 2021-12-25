@@ -68,10 +68,10 @@ Module.register("MMM-dataVisualizer", {
 			})
 
 			// Fill bar using thresholds.
-			c.rect((visualization.width/2)-((toDisplay.length*20)/2)+1,11,px,19);
+			c.rect(10+1,11,px,19);
 			c.fill();
 			c.strokeStyle = 'white';
-			c.rect((visualization.width/2)-((toDisplay.length*20)/2),10,toDisplay.length*20,20);
+			c.rect(10,10,toDisplay.length*20,20);
 			c.stroke();
 			
 
