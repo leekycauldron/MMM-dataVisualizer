@@ -35,7 +35,7 @@ Module.register("MMM-dataVisualizer", {
     	var wrapper = document.createElement("div");
 		wrapper.id = "wrapper";
         
-		let title = document.createElement('h1');
+		let title = document.createElement('p');
 		title.innerHTML = this.config.title;
 
         fetch(this.config.link)
